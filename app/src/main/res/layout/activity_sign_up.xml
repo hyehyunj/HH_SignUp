@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginStart="20dp"
-    android:layout_marginEnd="20dp"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
     tools:context=".SignUpActivity">
 
 
@@ -172,7 +172,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:padding="10dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:elevation="5dp"
         android:background="@drawable/selector_btn_bg"
         app:layout_constraintTop_toBottomOf="@+id/et_signUp_age"
@@ -185,7 +185,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_marginEnd="10dp"
-            android:text="회 원 가 입"
+            android:text="회원가입"
             android:textColor="@color/btn_color"
             android:textSize="25sp"
             android:textStyle="bold"

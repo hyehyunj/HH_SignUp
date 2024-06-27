@@ -55,16 +55,8 @@ class SignUpActivity : AppCompatActivity() {
                 Toast.makeText(this, "회원가입 완료", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, SignInActivity::class.java)
                 intent.putExtra("userData", UserClass(idData.toString(),pwdData.toString(),nameData.toString(),genderData,ageData.toString()))
-                startActivity(intent)
-
-//                val intent = Intent(this, SignInActivity::class.java)
-//                intent.putExtra("idFromSignUpActivity",idData.toString())
-//                intent.putExtra("pwdFromSignUpActivity",pwdData.toString())
-//                intent.putExtra("nameFromSignUpActivity",nameData.toString())
-//                intent.putExtra("genderFromSignUpActivity",genderData)
-//                intent.putExtra("ageFromSignUpActivity",ageData.toString())
-//                setResult(RESULT_OK,intent)
-//                finish()
+                setResult(RESULT_OK,intent)
+                finish()
             }
         }
     }

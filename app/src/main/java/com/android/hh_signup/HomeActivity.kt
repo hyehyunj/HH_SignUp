@@ -30,32 +30,13 @@ class HomeActivity : AppCompatActivity() {
         val tvGender = findViewById<TextView>(R.id.tv_home_userGender)
         val tvAge = findViewById<TextView>(R.id.tv_home_userAge)
         val btnFinish = findViewById<ConstraintLayout>(R.id.btn_home_finish)
-        var btnFinishText = findViewById<TextView>(R.id.tv_home_finish)
-        var btnFinishImage = findViewById<ImageView>(R.id.iv_home_finish)
 
         //회원가입데이터 받아오기
-
-
         val userData = intent.getParcelableExtra<UserClass>("userData")
-        tvId.text = userData?.id
-        val signInNameData = intent.getStringExtra("nameFromSignInActivity")
-        tvName.text = "${userData?.name} 님"
-        val signInGenderData = intent.getStringExtra("genderFromSignInActivity")
-        tvGender.text = userData?.gender
-        val signInAgeData =  intent.getStringExtra("ageFromSignInActivity")
-        tvAge.text = "${userData?.age} 세"
-
-
-
-
-//        val signInIdData = intent.getStringExtra("idFromSignInActivity")
-//        tvId.text = signInIdData
-//        val signInNameData = intent.getStringExtra("nameFromSignInActivity")
-//        tvName.text = "${signInNameData} 님"
-//        val signInGenderData = intent.getStringExtra("genderFromSignInActivity")
-//        tvGender.text = signInGenderData
-//        val signInAgeData =  intent.getStringExtra("ageFromSignInActivity")
-//        tvAge.text = "${signInAgeData} 세"
+        tvId.text = userData!!.id
+        tvName.text = "${userData.name} 님"
+        tvGender.text = userData.gender
+        tvAge.text = "${userData.age} 세"
 
         //랜덤사진
         when(Random.nextInt(1,6)) {
