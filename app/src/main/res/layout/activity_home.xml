@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    android:background="@drawable/layout_bg"
+    android:background="@drawable/bg_home"
     tools:context=".HomeActivity">
 
 
@@ -156,7 +156,7 @@
             android:gravity="center"
             android:layout_marginEnd="10dp"
             android:text="종료"
-            android:textColor="@color/btn_finish_color"
+            android:textColor="@color/finish_btn_color"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
