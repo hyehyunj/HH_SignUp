@@ -7,8 +7,8 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class UserClass(
     var id:String,
-    var pwd:String,
-    var name:String,
-    var gender:String,
-    var age:String
+    val pwd:String,
+    val name:String,
+    val gender:String,
+    val age:String
     ) : Parcelable

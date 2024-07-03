@@ -16,7 +16,7 @@ import androidx.core.view.WindowInsetsCompat
 
 class SignInActivity : AppCompatActivity() {
     //인스턴스와 런처
-    private var userData: UserClass = UserClass("", "", "", "", "")
+    private var userData: UserClass? = UserClass("", "", "", "", "")
     private lateinit var getResult: ActivityResultLauncher<Intent>
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,9 +39,9 @@ class SignInActivity : AppCompatActivity() {
         getResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
         result: ActivityResult ->
             if (result.resultCode == RESULT_OK) {
-                userData = result.data?.getParcelableExtra("userData")!!
-                etId.setText(userData.id)
-                etPwd.setText(userData.pwd)
+                userData = result.data?.getParcelableExtra("userData")
+                etId.setText(userData?.id)
+                etPwd.setText(userData?.pwd)
             }
         }
 
@@ -49,7 +49,7 @@ class SignInActivity : AppCompatActivity() {
         btnSignIn.setOnClickListener {
             etId.text
             etPwd.text
-            userData.id = etId.text.toString()
+            userData?.id = etId.text.toString()
             if (etId.text.isBlank() || etPwd.text.isBlank()) {
                 Toast.makeText(this, "아이디/비밀번호를 확인해주세요.", Toast.LENGTH_SHORT).show()
             } else {

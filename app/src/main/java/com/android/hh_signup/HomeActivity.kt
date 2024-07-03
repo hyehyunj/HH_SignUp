@@ -33,10 +33,10 @@ class HomeActivity : AppCompatActivity() {
 
         //회원가입데이터 받아오기
         val userData = intent.getParcelableExtra<UserClass>("userData")
-        tvId.text = userData!!.id
-        tvName.text = "${userData.name} 님"
-        tvGender.text = userData.gender
-        tvAge.text = "${userData.age} 세"
+        tvId.text = userData?.id
+        tvName.text = "${userData?.name} 님"
+        tvGender.text = userData?.gender
+        tvAge.text = "${userData?.age} 세"
 
         //랜덤사진
         when(Random.nextInt(1,6)) {
